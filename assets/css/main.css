@@ -191,16 +191,24 @@ display: flex;
 
 .trip__img{
     display: flex;
+    justify-content: center;
 }
 
 .trip__img-list{
     margin-bottom: 44px;
+    width: 300px;
 }
 
 .trip__img-list-start{
     width: 100%;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
     0 2px 10px 0 rgb(0 0 0 / 12%);
+    border-radius: 10px;
+}
+
+.trip__img-list-start:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .trip__video{
@@ -209,7 +217,7 @@ display: flex;
     display: flex;
 }
 
-.trip__video h3{
+.trip__video h2{
     margin: 0 0 44px 0;
     color: #7F2736;
 }
@@ -271,15 +279,36 @@ display: flex;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
     0 2px 10px 0 rgb(0 0 0 / 12%);
 }
-.why__box-small{
-    background-color: red ;
-    width: 100px;
-    height: 100px;
+
+.why__box-large i{
+    font-size: 30px;
+    line-height: 80px;
+    color: #fff;
+}
+
+.why__box-small-1,
+.why__box-small-2,
+.why__box-small-3{
+    width: 80px;
+    height: 80px;
     position: absolute;
     border-radius: 50%;
-    top: -50px;
+    top: -40px;
     right: 35%;
 }
+
+.why__box-small-1 {
+    background-color: #EE5060;
+}
+
+.why__box-small-2 {
+    background-color: #F0C53E;
+}
+
+.why__box-small-3{
+    background-color: #AF6C2C;
+}
+
 
 .why__box-large h3{
     position: absolute;
@@ -292,4 +321,62 @@ display: flex;
     position: absolute;
     top: 50%;
     right: 1px;
+}
+
+.feedback{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+}
+
+.feedback-header{
+}
+
+.feedback-indent{
+    text-indent: 45px;
+    letter-spacing: 3px;
+}
+
+.feedback-header p{
+    margin: 24px 0;
+}
+
+.feedback-header h1{
+    color: #7F2736;
+}
+
+.feedback__cmt{
+
+}
+
+.feedback__cmt-img {
+    position: relative;
+}
+
+.feedback__cmt-img img{
+    width: 320px;
+    margin: 45px 0 0 0;
+    padding: 5px 20px;
+}
+
+.feedback__cmt-text {
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+    0 2px 10px 0 rgb(0 0 0 / 12%);
+    width: 350px;
+    position: absolute;
+}
+
+.feedback__cmt-text p{
+    font-size: 12px;
+}
+
+
+.feedback__cmt-info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.feedback__cmt-star{
+
 }
