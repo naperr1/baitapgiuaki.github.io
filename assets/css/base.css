@@ -33,3 +33,25 @@ html{
     padding-left: 12px;
     padding-right: 12px;
 }
+
+@keyframes madalFaceIn{
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile: width < 740px */
+
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    body{
+        
+    }
+}
+

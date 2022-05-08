@@ -1,9 +1,8 @@
 
-
-
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 50px;
     line-height: 50px;
     /* box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%); */
     position: fixed;
@@ -11,6 +10,8 @@
     background-color: #9cf3f9;
     z-index: 1;
     top: 0;
+    padding: 0 50px;
+    /* overflow: hidden; */
 }
 
 .header__logo {
@@ -53,9 +54,9 @@
     font-size: 12px;
 }
 
-.nav li:last-child{
+/* .nav li:last-child{
 display: flex;
-}
+} */
 .header__navs{
     text-decoration: none;
     color: #000;
@@ -77,6 +78,25 @@ display: flex;
 
 .header__telephone:hover{
     background-color: #feb815;
+}
+
+.mobile-menu-btn{
+    float: left;
+    padding: 0 20px;
+    display: none;
+}
+
+.mobile-menu-btn:hover{
+    cursor: pointer;
+}
+
+.menu-icon{
+    color: #000;
+    font-size: 16px;
+}
+
+#click{
+    display: none;
 }
 
 .container {
@@ -184,6 +204,8 @@ display: flex;
     font-weight: 600;
 }
 
+/* Watch, our lattest vlog */
+
 .trip__text-header{
     margin: 44px 0;
     color: #7F2736;
@@ -192,11 +214,52 @@ display: flex;
 .trip__img{
     display: flex;
     justify-content: center;
+    margin-bottom: 44px;
 }
 
 .trip__img-list{
     margin-bottom: 44px;
     width: 300px;
+    position: relative;
+}
+
+.color-overlay{
+        position: absolute;
+        background: #7F2736;
+        top: 0;
+        width: 92%;
+        height: 97%;
+        opacity: 0.4;
+        border-radius: 8px;
+}
+
+.trip__img-list-text{
+    position: absolute;
+    top: 30%;
+    right: 0;
+    left: 0;
+}
+
+.trip__img-list-text h3{
+    color: #fff;
+    padding-bottom: 16px;
+    font-weight: 500;
+}
+
+.trip__img-list-btn{
+    background: none;
+    color: inherit;
+    border: 1px solid #fff;
+    padding: 12px 16px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.trip__img-list-btn:hover{
+    opacity: 0.8;
 }
 
 .trip__img-list-start{
@@ -206,10 +269,10 @@ display: flex;
     border-radius: 10px;
 }
 
-.trip__img-list-start:hover{
+/* .trip__img-list-start:hover{
     opacity: 0.8;
     cursor: pointer;
-}
+} */
 
 .trip__video{
     max-width: 1100px;
@@ -218,7 +281,7 @@ display: flex;
 }
 
 .trip__video h2{
-    margin: 0 0 44px 0;
+    margin: 52px 0 44px 0;
     color: #7F2736;
 }
 
@@ -237,13 +300,15 @@ display: flex;
 }
 
 .trip__video-watch{
-
+    margin-top: 44px;
 }
 
 .trip__video-watch-1{
     width: 480px;
     margin-bottom: 44px;
 }
+
+/* WHY Choose Us */
 
 .why{
     max-width:1100px;
@@ -278,6 +343,7 @@ display: flex;
     position: relative;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
     0 2px 10px 0 rgb(0 0 0 / 12%);
+    border-radius: 5px;
 }
 
 .why__box-large i{
@@ -323,40 +389,62 @@ display: flex;
     right: 1px;
 }
 
+/* FeedBack */
+
 .feedback{
     max-width: 1100px;
     margin: auto;
     display: flex;
+    padding-bottom: 80px;
 }
 
 .feedback-header{
 }
 
+.feedback__slider{
+}
+
 .feedback-indent{
-    text-indent: 45px;
+    text-indent: 60px;
     letter-spacing: 3px;
+    position: relative;
+    margin-top: 50px;
 }
 
 .feedback-header p{
-    margin: 24px 0;
+    margin-bottom: 24px;
 }
 
-.feedback-header h1{
+.feedback-header p:first-child::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 45px;
+    border-top: 1px solid #000;
+    top: 10px;
+    left: 0;
+}
+
+.feedback-header h2{
     color: #7F2736;
+    margin-bottom: 24px;
 }
 
 .feedback__cmt{
-
+    position: relative;
+    margin-bottom: 88px;
 }
 
 .feedback__cmt-img {
-    position: relative;
+    text-align: center;
 }
 
 .feedback__cmt-img img{
     width: 320px;
+    height: 320px;
     margin: 45px 0 0 0;
-    padding: 5px 20px;
+    padding: 0px 10px;
+    object-fit: cover;
 }
 
 .feedback__cmt-text {
@@ -365,18 +453,255 @@ display: flex;
     0 2px 10px 0 rgb(0 0 0 / 12%);
     width: 350px;
     position: absolute;
+    border-radius: 5px;
+    padding: 8px 12px;
+    top: 80%;
+    left: 35%;
+    border-left: 8px solid #EE5060;
 }
 
 .feedback__cmt-text p{
     font-size: 12px;
+    border-left: 1px solid #bbb;
+    padding-left: 10px;
 }
 
 
 .feedback__cmt-info{
     display: flex;
     justify-content: space-around;
+    margin: 8px 0;
+
+}
+
+.feedback__cmt-info h4{
+    font-size: 12px;
 }
 
 .feedback__cmt-star{
-
+    font-size: 12px;
+    color: yellow;
 }
+
+.feedback-next{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+    0 2px 10px 0 rgb(0 0 0 / 12%);
+    text-align: center;
+    line-height: 40px;
+    top: 50%;
+    left: 75%;
+}
+
+.feedback-next-icon{
+    color: #1EA4CE;
+}
+
+/* footer */
+
+.footer{
+    margin: auto;
+    background-color: #9CF3F9;
+}
+
+.footer__header{
+    display: flex;
+    justify-content: center;
+    padding-top: 44px;
+}
+
+.footer__header h2{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer__header h3{
+    border-left: 1px solid rgb(97, 96, 96);
+    font-size: 16px;
+    padding-left: 12px;
+}
+
+.footer__header-logo{
+    line-height: 48px;
+}
+
+.footer-describle{
+        text-align: center;
+        margin: 44px 0 12px 0;
+} 
+
+.footer-describle h3{
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+}
+
+.footer__sub{
+
+} 
+
+.footer__sub-input{
+    text-align: center;
+} 
+
+.footer__sub-input-email{
+        padding: 8px 24px;
+        margin-right: 16px;
+        border: 1px solid #B25A59;
+        border-radius: 25px;
+}
+
+.footer__sub-input-send{
+        border: 0;
+        padding: 8px 12px;
+        background-color: #B25A59;
+        border-radius: 25px;
+}
+
+.footer__sub-input-send:hover {
+    background-color: #cf5c5a;
+    cursor: pointer;
+}
+
+.footer__security{
+} 
+
+.footer__security-text{
+    display: flex;
+    justify-content: center;
+} 
+
+.footer__security-text p {
+    font-size: 12px;
+    position: relative;
+    margin: 44px 12px 22px;
+}
+
+.footer__security-text p:first-child::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 16px;
+    border-left: 1px solid #000;
+    top: 1.5px;
+    right: -12px;
+}
+
+.footer__security-text p:nth-last-child(2)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 16px;
+    border-left: 1px solid #000;
+    top: 1.5px;
+    right: -12px;
+}
+
+/* .footer__security-text p:first-child{
+    border-right: 1px solid #000;
+    top: 1.5px;
+    right: -12px;
+    position: absolute;
+}
+
+.footer__security-text p:last-child{
+    border-left: 1px solid #000;
+    top: 1.5px;
+    right: -12px;
+    position: absolute;
+} */
+
+.footer__security-icon{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__security-icon i{
+    padding: 0 12px;
+    line-height: 24px;
+    font-size: 12px;
+}
+
+ /* Modal */
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgb(0 0 0 / 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal.open{
+    display: flex;
+}
+
+.modal-container {
+    position: relative;
+    background: #fff;
+    width: 600px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    border-radius: 5px;
+    animation: madalFaceIn ease .6s;
+}
+
+.modal-header {
+    text-align: center;
+    height: 20px;
+    line-height: 48px;
+    border-radius: 5px 5px 0 0;
+ }
+
+/* .modal-header-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 12px;
+    color: #fff;
+    font-size: 18px;
+} */
+
+.modal-header-icon:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-input{
+    display: block;
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 16px 0px;
+}
+
+.modal-sub  {
+    background: #FA5757;
+    border: none;
+    color: #fff;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 16px;
+}
+
+.modal-sub1 {
+    text-align: center;
+}
+
+.modal-sub:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+

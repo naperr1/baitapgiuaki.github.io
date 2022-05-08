@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -20,23 +22,30 @@
             <div class="header__logo">
                 <a href="#" class="header__logo-link">Teams 8</a>
             </div>
+
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mobile-menu-btn">
+                <i class="fa-solid fa-bars menu-icon"></i>
+            </label>
             <ul class="nav">
                 <li><a href="#" class="header__nav">Home</a></li>
                 <li><a href="#discover" class="header__nav">Discover</a></li>
-                <li><a href="#" class="header__nav">About</a></li>
-                <li><a href="#" class="header__nav">Blog</a></li>
-                <li><a href="#" class="header__nav">Contract</a></li>
-                <li>
+                <li><a href="#about" class="header__nav">About</a></li>
+                <li><a href="#blog" class="header__nav">Blog</a></li>
+                <li><a href="#contract" class="header__nav">Contract</a></li>
+                <!-- <li>
                     <a href="#" class="header__navs">
                         <div class="header__telephone">
                             <i class="fa-solid fa-phone" style="color: #fff;"></i>
                             <a href="#" class="header__telephone-link">(+84) 345623384</a>
                         </div>
                     </a>
-                </li>
+                </li> -->
             </ul>
 
         </div>
+
     </div>
 
     <div class="container">
@@ -107,15 +116,25 @@
         <div class="trip__img">
             <div class="trip__img-list col col-half">
                 <img src="./assets/img/Start2.jpg" alt="" class="trip__img-list-start">
+                <div class="color-overlay"></div>
+                <div class="trip__img-list-text">
+                    <h3>For Domestic</h3>
+                    <button class="trip__img-list-btn js-buy-ticket">Start trip today</button>
+                </div>
             </div>
 
             <div class="trip__img-list col col-half">
                 <img src="./assets/img/Start1.jpg" alt="" class="trip__img-list-start">
+                <div class="color-overlay"></div>
+                <div class="trip__img-list-text">
+                    <h3>For International</h3>
+                    <button class="trip__img-list-btn js-buy-ticket">Start trip today</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="trip__video ">
+    <div class="trip__video" id="about">
         <div class="trip__video-text col col-half">
             <h2>Watch, our lattest vlog</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -127,8 +146,8 @@
         </div>
 
         <div class="trip__video-watch col col-half">
-            <video src="./assets/vid/JOURNEY TO VIETNAM _ A Cinematic Travel Video.mp4" class="trip__video-watch-1"
-                controls autoplay></video>
+            <!-- <video src="./assets/vid/JOURNEY TO VIETNAM _ A Cinematic Travel Video.mp4" class="trip__video-watch-1"
+                controls autoplay></video> -->
         </div>
     </div>
 
@@ -171,7 +190,7 @@
         </div>
     </div>
 
-    <div class="feedback">
+    <div class="feedback" id="blog">
         <div class="feedback-header col col-half">
             <p class="feedback-indent">TESTIMONIAL</p>
             <h2>What Customers Say?</h2>
@@ -180,29 +199,205 @@
             <p>Lorem Ipsum is simply dummy text of the</p>
         </div>
 
-        <div class="feedback__cmt col col-half">
-            <div class="feedback__cmt-img">
-                <img src="./assets/img/feedback.jpg" alt="feedback">
-            </div>
-
-            <div class="feedback__cmt-text">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard
-                    dummy text ever since the 1500s,</p>
-                <div class="feedback__cmt-info">
-                    <h4>Kyiloria Danu</h4>
-                    <div class="feedback__cmt-star">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
+        <div class="feedback__slider col col-half slideshow-container">
+            <div class="feedback__cmt mySlides fade">
+                <div class="feedback__cmt-img">
+                    <img src="./assets/img/HA1.jpg" alt="feedback">
                 </div>
 
+                <div class="feedback__cmt-text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been
+                        the
+                        industry's standard
+                        dummy text ever since the 1500s,</p>
+                    <div class="feedback__cmt-info">
+                        <h4>Kyiloria Danu</h4>
+                        <div class="feedback__cmt-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="feedback-next">
+                    <i class="fa-solid fa-angle-right feedback-next-icon"></i>
+                </div> -->
+            </div>
+
+            <div class="feedback__cmt mySlides fade">
+                <div class="feedback__cmt-img">
+                    <img src="./assets/img/feedback.jpg" alt="feedback">
+                </div>
+
+                <div class="feedback__cmt-text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been
+                        the
+                        industry's standard
+                        dummy text ever since the 1500s,</p>
+                    <div class="feedback__cmt-info">
+                        <h4>Kyiloria Danu</h4>
+                        <div class="feedback__cmt-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feedback__cmt mySlides fade">
+                <div class="feedback__cmt-img">
+                    <img src="./assets/img/DaLat1.jpg" alt="feedback">
+                </div>
+
+                <div class="feedback__cmt-text">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been
+                        the
+                        industry's standard
+                        dummy text ever since the 1500s,</p>
+                    <div class="feedback__cmt-info">
+                        <h4>Kyiloria Danu</h4>
+                        <div class="feedback__cmt-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer" id="contract">
+        <div class="footer__header">
+            <h2 class="footer__header-logo col">Team 8</h2>
+            <h3>Domestic &<br />International Tours</h3>
+        </div>
+        <div class="footer-describle">
+            <h3>Subscribe to get our Newsletter</h3>
+        </div>
+        <div class="footer__sub">
+            <form action="">
+                <div class="footer__sub-input">
+                    <input type="email" class="footer__sub-input-email" placeholder="Your Email" required>
+                    <input type="submit" value="Subscribe" class="footer__sub-input-send">
+                </div>
+            </form>
+        </div>
+
+        <div class="footer__security">
+            <div class="footer__security-text">
+                <p>Careers</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+            </div>
+            <div class="footer__security-icon">
+                <i class="fa-solid fa-copyright"></i>
+                <p>2022 Team 8</p>
             </div>
         </div>
 
     </div>
+
+    <!-- Modal -->
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+
+            <!-- <div class="modal-header-icon">
+                <i class="fa-solid fa-xmark"></i>
+            </div> -->
+
+            <header class="modal-header">
+                Discount: 15%
+            </header>
+
+            <div class="modal-body">
+                <input type="text" class="modal-input" placeholder="Name" required>
+                <input type="text" class="modal-input" placeholder="Email" required>
+                <input type="text" class="modal-input" placeholder="NumberPhone" required>
+                <input type="date" class="modal-input" placeholder="Departure date" required>
+                <div class="modal-sub1">
+                    <input type="submit" value="Subscribe" class="modal-sub ">
+                    <!-- <button class="modal-sub js-modal-close ">
+                        Subscribe
+                    </button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Feedback -->
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- Js ticket -->
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        //const modalCloseSub = document.querySelector('.js-modal-close')
+
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+
+        function highBuyTicket() {
+            modal.classList.remove('open')
+        }
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        modal.addEventListener('click', highBuyTicket)
+
+        // modalCloseSub.addEventListener('click', highBuyTicket)
+
+        modalContainer.addEventListener('click', function (envent) {
+            envent.stopPropagation()
+        })
+
+    </script>
+
+    <!-- Js-Slider -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <!-- Tự động đóng khi chọn menu -->
 
 </body>
 
