@@ -161,7 +161,7 @@ display: flex;
 }
 .trip__text-describe,
 .content__text-describe {
-    margin: 44px 0;
+    margin: 44px 325px;
     line-height: 1.6;
 }
 
@@ -288,6 +288,7 @@ display: flex;
 .trip__video p{
     text-align: left;
     margin-bottom: 36px;
+    margin-right: 40px;
 }
 
 .trip__video-text{
@@ -314,6 +315,7 @@ display: flex;
     max-width:1100px;
     margin: auto;
     text-align: center;
+    overflow: hidden;
     
 }
 
@@ -324,6 +326,10 @@ display: flex;
 
 .why p{
 
+}
+
+.why .why-header p {
+    margin: 0 325px;
 }
 
 .why-header{
@@ -385,8 +391,10 @@ display: flex;
 
 .why__box-large p{
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 1px;
+    padding: 0 12px;
+    font-size: 14px;
 }
 
 /* FeedBack */
@@ -412,7 +420,7 @@ display: flex;
 }
 
 .feedback-header p{
-    margin-bottom: 24px;
+    margin: 0px 80px 24px 0;
 }
 
 .feedback-header p:first-child::after{
@@ -506,6 +514,7 @@ display: flex;
 .footer{
     margin: auto;
     background-color: #9CF3F9;
+    overflow: hidden;
 }
 
 .footer__header{
@@ -618,6 +627,7 @@ display: flex;
 .footer__security-icon{
     display: flex;
     justify-content: center;
+    padding-bottom: 16px;
 }
 
 .footer__security-icon i{

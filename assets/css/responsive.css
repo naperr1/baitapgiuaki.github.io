@@ -16,12 +16,30 @@
         position: fixed;
         top: 50px;
         left: -100%;
-        background: #fff;
-        height: 50vh;
+        background: #9cf3f9;
+        height: 38vh;
         width: 100%;
         text-align: center;
         transition: all ease 0.3s;
     }
+
+    .header__nav:hover{
+        color: #fff;
+    }
+
+    .btn-text {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}   
+    .btn {
+            background-color: #B25A59;
+            border: none;
+            padding: 15px;
+            border-radius: 45px;
+            position: inherit;
+            margin: 12px 0;
+        }
 
     .mobile-menu-btn{
         display: block;
@@ -30,4 +48,101 @@
     #click:checked ~ ul{
         left: 0;
     }
+
+    .container__section{
+        display: block;
+        overflow: hidden;
+    }
+
+    .full-width-mobile{
+        width: 100%;
+    }
+
+    .trip__img{
+        display: block;
+    }
+    .trip__text-describe,
+    .content__text-describe {
+        margin: 44px 12px;
+        text-align: justify;
+    }
+
+    .color-overlay{
+        width: 94%;
+        height: 98%;
+    }
+    .trip__video{
+        display: block;
+        overflow: hidden;
+        text-align: center;
+    }
+    .trip__video-watch-1{
+        width: 212%;
+    }
+
+    .trip__video p {
+        text-align: justify;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    .why{
+        margin: 0 12px 44px;
+    }
+
+    .why .why-header p{
+        margin: 0;
+        text-align: justify;
+    }
+
+    .why__box{
+        display: block;
+    }
+    .why__box-large {
+        width: 100%;
+        margin: 32px 0;
+    }
+
+    .feedback{
+        display: block;
+        overflow: hidden;
+    }
+
+    .feedback-header {
+        width: 100%;
+        text-align: center;
+    }
+    .feedback-header p{
+            margin: 24px 0;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .feedback__slider {
+        width: 100%;
+    }
+
+        .feedback__cmt-text {
+            background-color: #fff;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+            width: 70%;
+            position: absolute;
+            border-radius: 5px;
+            padding: 8px 12px;
+            top: 83%;
+            left: 30%;
+            border-left: 8px solid #EE5060;
+        }
+
+        .footer__header h2 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .footer__header h3 {
+            border-left: 1px solid rgb(97, 96, 96);
+            font-size: 16px;
+            padding-left: 12px;
+            height: 45px;
+            font-weight: 600;
+        }
 }
