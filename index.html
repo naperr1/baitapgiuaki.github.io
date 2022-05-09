@@ -17,6 +17,9 @@
 </head>
 
 <body>
+
+    <!-- MAIN -->
+
     <div class="main">
         <div class="header">
             <div class="header__logo">
@@ -48,6 +51,8 @@
 
     </div>
 
+    <!-- CONTAINER -->
+
     <div class="container">
         <div class="row container__section" id="discover">
             <div class="full-width-mobile col col-half">
@@ -63,6 +68,8 @@
             </div>
         </div>
     </div>
+
+    <!-- CONTENT -->
 
     <div class="content ">
         <div class="content__text">
@@ -102,6 +109,8 @@
         </div>
     </div>
 
+    <!-- TRIP -->
+
     <div class="trip">
         <div class="trip__text">
             <h2 class="trip__text-header">Globally Accepted
@@ -132,6 +141,8 @@
         </div>
     </div>
 
+    <!-- TRIP VIDEO -->
+
     <div class="trip__video" id="about">
         <div class="trip__video-text col col-half full-width-mobile">
             <h2>Watch, our lattest vlog</h2>
@@ -148,6 +159,8 @@
                 controls autoplay></video>
         </div>
     </div>
+
+    <!-- WHY -->
 
     <div class="why">
         <div class="why-header">
@@ -194,6 +207,8 @@
         </div>
     </div>
 
+    <!-- FEEDBACK -->
+
     <div class="feedback" id="blog">
         <div class="feedback-header col col-half">
             <p class="feedback-indent">TESTIMONIAL</p>
@@ -208,15 +223,12 @@
         <div class="feedback__slider col col-half slideshow-container">
             <div class="feedback__cmt mySlides fade">
                 <div class="feedback__cmt-img">
-                    <img src="./assets/img/HA1.jpg" alt="feedback">
+                    <img src="./assets/img/feedback1.png" alt="feedback">
                 </div>
 
                 <div class="feedback__cmt-text">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been
-                        the
-                        industry's standard
-                        dummy text ever since the 1500s,</p>
+                    <p>This is one of the beautiful photos we took during that trip. The scenery here is really amazing.
+                    </p>
                     <div class="feedback__cmt-info">
                         <h4>Kyiloria Danu</h4>
                         <div class="feedback__cmt-star">
@@ -235,13 +247,13 @@
 
             <div class="feedback__cmt mySlides fade">
                 <div class="feedback__cmt-img">
-                    <img src="./assets/img/feedback.jpg" alt="feedback">
+                    <img src="./assets/img/feedback2.png" alt="feedback">
                 </div>
 
                 <div class="feedback__cmt-text">
-                    <p>Tuyệt Vời</p>
+                    <p>Your reception and staff are very enthusiastic, we are very satisfied with your service</p>
                     <div class="feedback__cmt-info">
-                        <h4>Đặng Sáng</h4>
+                        <h4>Johnny Dang</h4>
                         <div class="feedback__cmt-star">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -255,13 +267,14 @@
 
             <div class="feedback__cmt mySlides fade">
                 <div class="feedback__cmt-img">
-                    <img src="./assets/img/DaLat1.jpg" alt="feedback">
+                    <img src="./assets/img/feedback3.png" alt="feedback">
                 </div>
 
                 <div class="feedback__cmt-text">
-                    <p>Không còn gì để chê</p>
+                    <p>The menu is diverse and luxurious, the decoration gives a noble feeling and the prices are very
+                        reasonable.</p>
                     <div class="feedback__cmt-info">
-                        <h4>Phát </h4>
+                        <h4>Khoa Pug</h4>
                         <div class="feedback__cmt-star">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -275,6 +288,8 @@
 
         </div>
     </div>
+
+    <!-- FOOTER -->
 
     <div class="footer" id="contract">
         <div class="footer__header">
@@ -320,18 +335,22 @@
                 Discount: 15%
             </header>
 
-            <div class="modal-body">
-                <input type="text" class="modal-input" placeholder="Name" required>
-                <input type="text" class="modal-input" placeholder="Email" required>
-                <input type="text" class="modal-input" placeholder="NumberPhone" required>
-                <input type="date" class="modal-input" placeholder="Departure date" required>
-                <div class="modal-sub1">
-                    <input type="submit" value="Subscribe" class="modal-sub ">
-                    <!-- <button class="modal-sub js-modal-close ">
-                        Subscribe
-                    </button> -->
+            <form action="">
+                <div class="modal-body">
+                    <input type="text" class="modal-input" placeholder="Name" required>
+                    <input type="email" class="modal-input" placeholder="Email" required>
+                    <input type="number" class="modal-input" placeholder="NumberPhone" required>
+                    <input type="date" class="modal-input" placeholder="Departure date" required>
+                    <div class="modal-sub1">
+                        <input type="submit" value="Subscribe" class="modal-sub ">
+                        <!-- <button class="modal-sub js-modal-close ">
+                                        Subscribe
+                                    </button> -->
+                    </div>
                 </div>
-            </div>
+            </form>
+
+
         </div>
     </div>
 
@@ -395,7 +414,31 @@
         }
     </script>
 
-    <!-- Tự động đóng khi chọn menu -->
+    <!-- Success -->
+
+    <div class="success hide">
+        <div class="success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <p class="success-text">
+            Success: Your Form Sent Successfully!
+        </p>
+    </div>
+
+    <!-- Js Success -->
+
+    <script>
+        $('button').click(function () {
+            $('.success').addClass("show");
+            $('.success').addClass("alert");
+            $('.success').removeClass("hide");
+            setTimeout(function () { }, 3000);
+        });
+        $("#form").submit(function (e) {
+            e.preventDefault();
+        });
+    </script>
 
 </body>
 
