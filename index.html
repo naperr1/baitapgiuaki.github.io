@@ -54,13 +54,14 @@
     <!-- CONTAINER -->
 
     <div class="container">
-        <div class="row container__section" id="discover">
+        <div class="row container__section">
             <div class="full-width-mobile col col-half">
                 <h1 class="container__heading">Viet Nam in your screen</h1>
                 <p class="container__heading-sub-normal">
                     Let's begin your adventure together,and your desire will become a reality...
                 </p>
-                <button class="btn"><a href="https://www.youtube.com/" target="_blank" class="btn-text">Discover a new
+                <button class="btn"><a href="https://worldtravelfamily.com/vietnam-travel-blog/" target="_blank"
+                        class="btn-text">Discover a new
                         location</a></button>
             </div>
             <div class="col-half full-width-mobile">
@@ -71,7 +72,7 @@
 
     <!-- CONTENT -->
 
-    <div class="content ">
+    <div class="content " id="discover">
         <div class="content__text">
             <h2 class="content__text-header">POPULAR DESTINATION</h2>
             <p class="content__text-describe">Here are the moments, the views of some outstanding tourist
@@ -111,7 +112,7 @@
 
     <!-- TRIP -->
 
-    <div class="trip">
+    <div class="trip" id="about">
         <div class="trip__text">
             <h2 class="trip__text-header">Globally Accepted
             </h2>
@@ -143,7 +144,7 @@
 
     <!-- TRIP VIDEO -->
 
-    <div class="trip__video" id="about">
+    <div class="trip__video">
         <div class="trip__video-text col col-half full-width-mobile">
             <h2>Watch, our lattest vlog</h2>
             <p>Check out the video below to know more about our country's landscape. The beauty is captured through the
@@ -151,7 +152,7 @@
                 from all different angles. You will probably find a place that interests you. And don't forget to take
                 notes and let us
                 know what caught your eye.</p>
-            <a href="#" class="trip__video-link" target="_blank">Learn more</a>
+            <a href="https://www.roughguides.com/vietnam/" class="trip__video-link" target="_blank">Learn more</a>
         </div>
 
         <div class="trip__video-watch col col-half">
@@ -324,6 +325,8 @@
 
     <!-- Modal -->
 
+    <div id="toast"></div>
+
     <div class="modal js-modal">
         <div class="modal-container js-modal-container">
 
@@ -338,14 +341,14 @@
             <form action="">
                 <div class="modal-body">
                     <input type="text" class="modal-input" placeholder="Name" required>
-                    <input type="email" class="modal-input" placeholder="Email" required>
+                    <input type="email" class="modal-input email" placeholder="Email" required>
                     <input type="number" class="modal-input" placeholder="NumberPhone" required>
                     <input type="date" class="modal-input" placeholder="Departure date" required>
                     <div class="modal-sub1">
-                        <input type="submit" value="Subscribe" class="modal-sub ">
-                        <!-- <button class="modal-sub js-modal-close ">
-                                        Subscribe
-                                    </button> -->
+                        <!-- <input type="submit" value="Subscribe" class="modal-sub "> -->
+                        <button class="modal-sub js-modal-close">
+                            Subscribe
+                        </button>
                     </div>
                 </div>
             </form>
@@ -416,7 +419,7 @@
 
     <!-- Success -->
 
-    <div class="success hide">
+    <!-- <div class="success hide">
         <div class="success-icon">
             <i class="fa-solid fa-circle-check"></i>
         </div>
@@ -424,21 +427,11 @@
         <p class="success-text">
             Success: Your Form Sent Successfully!
         </p>
-    </div>
+    </div> -->
 
     <!-- Js Success -->
 
-    <script>
-        $('button').click(function () {
-            $('.success').addClass("show");
-            $('.success').addClass("alert");
-            $('.success').removeClass("hide");
-            setTimeout(function () { }, 3000);
-        });
-        $("#form").submit(function (e) {
-            e.preventDefault();
-        });
-    </script>
+
 
 </body>
 

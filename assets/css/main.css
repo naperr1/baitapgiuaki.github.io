@@ -100,7 +100,7 @@ display: flex;
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: 48px;
     width: 100%;
     background-color: #9CF3F9;
 }
@@ -717,42 +717,3 @@ display: flex;
 
 /* Success */
 
-.success{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #69a87f;
-    position: absolute;
-    top: 10%;
-    padding: 0 10px;
-    border-radius: 6px;
-    right: 0;
-    border-left: 7px solid #156e34;
-}
-
-.success-icon{
-    padding: 10px;
-}
-
-.success-text{
-    font-size: 14px;
-}
-
-.hide{
-    animation: hide_slide 1s ease forwards;
-}
-
-@keyframes hide_slide{
-    0%{
-        transform: translateX(-10px);
-    }
-    40%{
-        transform: translateX(0%);
-    }
-    80%{
-        transform: translateX(-10%);
-    }
-    100%{
-        transform: translateX(100%);
-    }
-}

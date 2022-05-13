@@ -1,3 +1,5 @@
+/* Mobile: width < 740px */
+
 @media only screen and (max-width: 46.1875em) {
     .header__telephone{
         display: none;
@@ -14,7 +16,7 @@
     .nav{
         display: block;
         position: fixed;
-        top: 50px;
+        top: 48px;
         left: -100%;
         background: #9cf3f9;
         height: 38vh;
@@ -144,5 +146,69 @@
             padding-left: 12px;
             height: 45px;
             font-weight: 600;
+        }
+}
+
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+        .trip__text-describe, 
+        .content__text-describe {
+            margin: 44px 125px;
+            line-height: 1.6;
+        }
+    
+        .trip__video {
+            max-width: 1100px;
+            margin: auto;
+            position: relative;
+            display: flex;
+        }
+
+        .trip__video-watch-1 {
+            width: 360px;
+            margin-bottom: 44px;
+            position: absolute;
+            top: 30%;
+        }
+
+        .why .why-header p {
+            margin: 0 12px;
+        }
+        .why__box {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 88px 12px;
+        }
+        
+        .feedback__cmt-text {
+            background-color: #fff;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+                0 2px 10px 0 rgb(0 0 0 / 12%);
+            width: 265px;
+            position: absolute;
+            border-radius: 5px;
+            padding: 8px 12px;
+            top: 85%;
+            left: 27%;
+            border-left: 8px solid #EE5060;
+        }
+    
+        .why__box-large {
+            width: 340px;
+            height: 350px;
+            margin: 0 5px;
+            background-color: #fff;
+            position: relative;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%),
+                0 2px 10px 0 rgb(0 0 0 / 12%);
+            border-radius: 5px;
+        }
+
+        .why__box-large h3 {
+            position: absolute;
+            text-align: center;
+            top: 25%;
+            left: 8%;
         }
 }
