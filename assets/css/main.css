@@ -36,6 +36,10 @@
     padding: 0 16px;
 }
 
+.header__nav:hover{
+    color: #fff;
+}
+
 .header__nav {
     display: inline-block;
     font-size: 15px;
